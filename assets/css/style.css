@@ -14,3 +14,21 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
 }
+
+.quiz-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 50%; 
+}
+
+.choice {
+  padding: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
