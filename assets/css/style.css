@@ -1,29 +1,40 @@
+
 body {
+  display: flex;
   background-image: url('../images/geography.webp'); 
+  justify-content: center;
+  align-items: center;
   background-size: cover; 
   background-position: center;
   background-repeat: no-repeat; 
   background-attachment: fixed; 
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   margin: 0;
   font-family: Arial, sans-serif;
 }
 
+.panel {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 60%; /* Adjusted width for better control */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Added for vertical centering */
+  flex-direction: column; /* Ensures content is stacked vertically */
+}
+
+
 .quiz-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
-  width: 50%; 
+  width: 100%; 
 }
 
 .choice {
-  padding: 20px;
+  padding: 30px;
   font-size: 16px;
   cursor: pointer;
   background-color: rgba(27, 14, 122, 0.95);
