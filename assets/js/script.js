@@ -7,6 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
           selectAnswer(this.id);
       });
   });
+
+  document.getElementById('newGameButton').addEventListener('click', startNewGame);
 });
 
 function selectAnswer(buttonId) {
