@@ -23,7 +23,7 @@ function selectAnswer(buttonId) {
 // Function to display the question
 function displayQuestion() {
   if (questions.length > 0 && currentQuestionIndex < questions.length) {
-    setTimeout(() => {
+    setTimeout(() => { // Retrieve the current question from the questions list
       const currentQuestion = questions[currentQuestionIndex];
       document.getElementById('question').textContent = currentQuestion.question;
       currentQuestion.options.forEach((option, index) => {
@@ -31,7 +31,7 @@ function displayQuestion() {
       });
     }, 100); // Delay to allow DOM time to update
   } else {
-    console.log("No questions available or an error occurred");
+    console.log("No questions available or an error occurred"); // print a message to console if no questions are availale or other errors occurred
   }
 }
 
