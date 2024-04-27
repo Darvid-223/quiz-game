@@ -25,6 +25,7 @@ body {
   align-items: center;  
   flex-direction: column; 
   position: relative;
+  min-height: 360px; 
 }
 
 .home-icon {
