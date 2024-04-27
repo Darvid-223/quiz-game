@@ -1,6 +1,8 @@
 
-// variable to store questions
+// variables
 let questions = [];
+let currentQuestionIndex = 0;
+let score = 0; 
 
 // Eventlistener that loads after html is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -15,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
 function selectAnswer(buttonId) {
   console.log("Button clicked:", buttonId);
 
@@ -22,7 +25,7 @@ function selectAnswer(buttonId) {
   buttons.forEach(button => {
       button.disabled = true; // Disable all buttons to prevent further clicks
   });
-  
+
   const selectedButton = document.getElementById(buttonId);
   const selectedAnswer = selectedButton.textContent;
   const correctAnswer = questions[currentQuestionIndex].answer;
@@ -30,10 +33,15 @@ function selectAnswer(buttonId) {
   if (selectedAnswer === correctAnswer) {
     selectedButton.style.backgroundColor = 'green'; // Indicate correct answer
     console.log("Correct Answer!");
+    score++;
   } else {
     selectedButton.style.backgroundColor = 'red'; // Indicate wrong answer
     console.log("Wrong Answer!");
   }
+
+  updateScoreDisplay();
+
+
   // Wait for 3 seconds before moving to the next question
   setTimeout(() => {
     currentQuestionIndex++; // Move to the next question
@@ -44,7 +52,7 @@ function selectAnswer(buttonId) {
       console.log("End of quiz");
       // Optionally, reset the game or display final score
     }
-  }, 3000);
+  }, 2500);
 }
 
 function resetButtonStyles() {
@@ -53,6 +61,16 @@ function resetButtonStyles() {
     button.disabled = false; // Re-enable the buttons
   });
 }
+
+
+// function to update score
+function updateScoreDisplay() {
+  const scoreElement = document.getElementById('currentScore'); // Assume there's an element with id 'scoreDisplay'
+  if (scoreElement) {
+      scoreElement.textContent = `Score: ${score}`;
+  }
+}
+
 
 // Function to display the question
 function displayQuestion() {

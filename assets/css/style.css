@@ -1,7 +1,7 @@
 
 body {
   display: flex;
-  background-image: url('../images/geography.webp'); 
+  background-image: url('../images/world-map-smaller.jpg'); 
   justify-content: center;
   align-items: center;
   background-size: cover; 
