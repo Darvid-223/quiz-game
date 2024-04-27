@@ -34,9 +34,10 @@ function startNewGame() {
 function updateScoreDisplay() {
   const scoreElement = document.getElementById('currentScore');
   if (scoreElement) {
-      scoreElement.textContent = `Score: ${score}`; // Update score text
+      scoreElement.textContent = score; // Update score text
   }
 }
+
 
 function selectAnswer(buttonId) {
   const buttons = document.querySelectorAll('.choice');
@@ -91,13 +92,7 @@ function resetButtonStyles() {
 }
 
 
-// function to update score
-function updateScoreDisplay() {
-  const scoreElement = document.getElementById('currentScore'); // Assume there's an element with id 'scoreDisplay'
-  if (scoreElement) {
-      scoreElement.textContent = `Score: ${score}`;
-  }
-}
+
 
 
 // Function to display the question
