@@ -36,6 +36,8 @@ function startNewGame() {
     resetButtonStyles(); // reset button color
     showElements() // show buttons 
     displayQuestion(); // Display the first question
+
+    document.getElementById('newGameButton').style.display = 'none'; // Hide the new game button
   });
 }
 
@@ -136,6 +138,8 @@ function gameOver() {
     gameOverMessage.textContent = `Game Over! Final score: ${score}.`;
     gameOverMessage.style.display = 'block'; // show element
   }
+  document.getElementById('newGameButton').style.display = 'block'; // Show the new game button again
+  
 }
 
 
