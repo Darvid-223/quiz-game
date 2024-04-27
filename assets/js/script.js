@@ -17,8 +17,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function selectAnswer(buttonId) {
   console.log("Button clicked:", buttonId);
+  const selectedButton = document.getElementById(buttonId);
+  const selectedAnswer = selectedButton.textContent;
+  const correctAnswer = questions[currentQuestionIndex].answer;
 
+  if (selectedAnswer === correctAnswer) {
+    selectedButton.style.backgroundColor = 'green'; // Indicate correct answer
+    console.log("Correct Answer!");
+  } else {
+    selectedButton.style.backgroundColor = 'red'; // Indicate wrong answer
+    console.log("Wrong Answer!");
+  }
+  // Wait for 3 seconds before moving to the next question
+  setTimeout(() => {
+    currentQuestionIndex++; // Move to the next question
+    if (currentQuestionIndex < questions.length) {
+      displayQuestion(); // Display the next question
+      resetButtonStyles(); // Reset the button styles for the new question
+    } else {
+      console.log("End of quiz");
+      // Optionally, reset the game or display final score
+    }
+  }, 3000);
 }
+
 
 // Function to display the question
 function displayQuestion() {
@@ -51,34 +73,3 @@ function startNewGame() {
 
 
 
-/* 
--This code is for decoding/unescaping html without using 'he' library
-
-
-// Function to display the question
-function displayQuestion() {
-  if (questions.length > 0 && currentQuestionIndex < questions.length) {
-      const currentQuestion = questions[currentQuestionIndex];
-      
-      const questionText = unescapeHtml(currentQuestion.question); // Unescape HTML enitites in quesion
-      document.getElementById('question').textContent = questionText;
-
-      currentQuestion.options.forEach((option, index) => {
-          
-          const choiceText = unescapeHtml(option); // Unescape HTML entities in each choice
-          document.getElementById(`choice${index + 1}`).textContent = choiceText;
-      });
-  } else {
-      console.log("No questions available or an error occurred"); // print a message to console if no questions are availale or other errors occurred
-  }
-}
-
-
-
-// function to unescape html entities
-function unescapeHtml(html) {
-  let temp = document.createElement("div"); // Create a temporary div element
-  temp.innerHTML = html; // Set the HTML content to argument
-  return temp.textContent || temp.innerText || ""; // Retrieve the text from the div
-}
-*/
