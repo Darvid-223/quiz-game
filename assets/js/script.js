@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to initiate the game
 function startNewGame() {
-  fetchTriviaQuestions().then(fetchedQuestions => {
+  let selectedDifficulty = document.getElementById('difficulty').value;
+  fetchTriviaQuestions(selectedDifficulty).then(fetchedQuestions => {
 
     questions = fetchedQuestions; // Store fetched questions
     const gameOverMessage = document.getElementById('gameOverMessage');

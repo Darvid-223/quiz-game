@@ -19,22 +19,28 @@
 
   </h1>
   <div class="panel">
+    <div class="difficulty-selection">
+        <label for="difficulty">Choose difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium" selected>Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+    </div>
     <div id="question" class="question"></div>
     <div class="quiz-container">
-      <div id="gameOverMessage" style="display: none;"></div>
-      <button class="choice" id="choice1"></button>
-      <button class="choice" id="choice2"></button>
-      <button class="choice" id="choice3"></button>
-      <button class="choice" id="choice4"></button>
+        <div id="gameOverMessage" style="display: none;"></div>
+        <button class="choice" id="choice1"></button>
+        <button class="choice" id="choice2"></button>
+        <button class="choice" id="choice3"></button>
+        <button class="choice" id="choice4"></button>
     </div>
     <button id="newGameButton" class="new-game">New Game</button>
-  </div>
-  <div class="scoreboard">
-    <p>Score: <span id="currentScore">0</span></i></p>
+</div>
+<div class="scoreboard">
+    <p>Score: <span id="currentScore">0</span></p>
     <p>Question: <span id="correctCount">1 / 10</span></p>
-
-
-  </div>
+</div>
   <script src="assets/js/questions.js"></script> 
   <script src="assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/he/he.js"></script> <!-- import he library to decode html-->
