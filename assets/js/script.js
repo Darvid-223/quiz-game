@@ -1,8 +1,8 @@
 
 // variables
-let questions = [];
-let currentQuestionIndex = 0;
-let score = 0; 
+let questions = []; 
+let currentQuestionIndex = 0; // tracks current question index
+let score = 0;  // score
 
 // Eventlistener that loads after html is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 function selectAnswer(buttonId) {
-  console.log("Button clicked:", buttonId);
-
   const buttons = document.querySelectorAll('.choice');
   buttons.forEach(button => {
       button.disabled = true; // Disable all buttons to prevent further clicks
@@ -34,13 +32,21 @@ function selectAnswer(buttonId) {
     selectedButton.style.backgroundColor = 'green'; // Indicate correct answer
     console.log("Correct Answer!");
     score++;
+
   } else {
     selectedButton.style.backgroundColor = 'red'; // Indicate wrong answer
     console.log("Wrong Answer!");
+    
+    // Find and color the correct answer button green
+    buttons.forEach(button => {
+      if (button.textContent === correctAnswer) {
+        button.style.backgroundColor = 'green'; // Indicate correct answer
+      }
+    });
   }
 
-  updateScoreDisplay();
 
+  updateScoreDisplay(); // update score
 
   // Wait for 3 seconds before moving to the next question
   setTimeout(() => {
@@ -48,6 +54,7 @@ function selectAnswer(buttonId) {
     if (currentQuestionIndex < questions.length) {
       displayQuestion(); // Display the next question
       resetButtonStyles(); // Reset the button styles for the new question
+
     } else {
       console.log("End of quiz");
       // Optionally, reset the game or display final score
