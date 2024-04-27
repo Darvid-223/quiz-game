@@ -23,15 +23,18 @@ function selectAnswer(buttonId) {
 // Function to display the question
 function displayQuestion() {
   if (questions.length > 0 && currentQuestionIndex < questions.length) {
-    setTimeout(() => { // Retrieve the current question from the questions list
       const currentQuestion = questions[currentQuestionIndex];
-      document.getElementById('question').textContent = currentQuestion.question;
+      
+      const questionText = unescapeHtml(currentQuestion.question); // Unescape HTML enitites in quesion
+      document.getElementById('question').textContent = questionText;
+
       currentQuestion.options.forEach((option, index) => {
-        document.getElementById(`choice${index + 1}`).textContent = option;
+          
+          const choiceText = unescapeHtml(option); // Unescape HTML entities in each choice
+          document.getElementById(`choice${index + 1}`).textContent = choiceText;
       });
-    }, 100); // Delay to allow DOM time to update
   } else {
-    console.log("No questions available or an error occurred"); // print a message to console if no questions are availale or other errors occurred
+      console.log("No questions available or an error occurred"); // print a message to console if no questions are availale or other errors occurred
   }
 }
 
@@ -44,4 +47,13 @@ function startNewGame() {
     currentQuestionIndex = 0; // Reset the question index to start from the first question
     displayQuestion(); // Display the first question
   });
+}
+
+
+
+// function to unescape html entities
+function unescapeHtml(html) {
+  let temp = document.createElement("div"); // Create a temporary div element
+  temp.innerHTML = html; // Set the HTML content to argument
+  return temp.textContent || temp.innerText || ""; // Retrieve the text from the div
 }
