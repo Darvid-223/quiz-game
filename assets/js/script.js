@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function selectAnswer(buttonId) {
   console.log("Button clicked:", buttonId);
+
+  const buttons = document.querySelectorAll('.choice');
+  buttons.forEach(button => {
+      button.disabled = true; // Disable all buttons to prevent further clicks
+  });
+  
   const selectedButton = document.getElementById(buttonId);
   const selectedAnswer = selectedButton.textContent;
   const correctAnswer = questions[currentQuestionIndex].answer;
@@ -44,6 +50,7 @@ function selectAnswer(buttonId) {
 function resetButtonStyles() {
   document.querySelectorAll('.choice').forEach(button => {
     button.style.backgroundColor = ''; // Reset the background color
+    button.disabled = false; // Re-enable the buttons
   });
 }
 
