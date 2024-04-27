@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
           selectAnswer(this.id); 
       });
   });
-
+  
   document.getElementById('newGameButton').addEventListener('click', startNewGame); // Added event listener to id: "newGameButton", and calling "startNewGame" function when clicked
 });
 
@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
 function startNewGame() {
     let selectedDifficulty = document.getElementById('difficulty').value;
     fetchTriviaQuestions(selectedDifficulty).then(fetchedQuestions => {
-
+    if (fetchedQuestions.length === 0) {
+      console.error("Failed to start game due to no fetched questions.");
+      return; // Exit if no questions are fetched
+    }
     questions = fetchedQuestions; // Store fetched questions
     const gameOverMessage = document.getElementById('gameOverMessage');
     gameOverMessage.style.display = 'none';
@@ -157,6 +160,7 @@ function showElements() {
   const difficultyDiv = document.getElementById('difficulty-selection');
   difficultyDiv.style.display = 'none';
 
+  
   const choiceButtons = document.querySelectorAll('.choice');
   choiceButtons.forEach(button => {
       button.style.display = 'block'; // Show all choice buttons
