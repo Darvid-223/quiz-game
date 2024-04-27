@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+
 // Function to initiate the game
 function startNewGame() {
     let selectedDifficulty = document.getElementById('difficulty').value;
@@ -152,6 +153,9 @@ function hideElements() {
 function showElements() {
   const questionDiv = document.getElementById('question');
   questionDiv.style.display = 'block'; // Show the question div
+
+  const difficultyDiv = document.getElementById('difficulty-selection');
+  difficultyDiv.style.display = 'none';
 
   const choiceButtons = document.querySelectorAll('.choice');
   choiceButtons.forEach(button => {
