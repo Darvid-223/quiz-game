@@ -110,6 +110,15 @@ function displayQuestion() {
 // Game over function
 function gameOver() {
   console.log("Game OVer!");
+      
+      const questionDiv = document.getElementById('question'); // Hide the question div
+      questionDiv.style.display = 'none';
+  
+    
+      const choiceButtons = document.querySelectorAll('.choice'); // Hide all choice buttons within the quiz container
+      choiceButtons.forEach(button => {
+          button.style.display = 'none';
+      });
 }
 
 
