@@ -109,21 +109,21 @@ function resetButtonStyles() {
 // Function to display the question
 function displayQuestion() {
   if (questions.length > 0 && currentQuestionIndex < questions.length) {
-    setTimeout(() => {
-      const currentQuestion = questions[currentQuestionIndex];
-      
-      document.getElementById('question').textContent = he.decode(currentQuestion.question); // update displayed question and decode HTML entities in the question text
 
-      currentQuestion.options.forEach((option, index) => {
-        document.getElementById(`choice${index + 1}`).textContent = he.decode(option); // Update choice button text and decode HTML entities in each option and update the button text
-      });
+    const currentQuestion = questions[currentQuestionIndex];
+    
+    document.getElementById('question').textContent = he.decode(currentQuestion.question); // update displayed question and decode HTML entities in the question text
 
-      
-      const questionCountDisplay = document.getElementById('correctCount'); // Update the question counter on the UI
-      questionCountDisplay.textContent = `${currentQuestionIndex + 1} / ${questions.length}`; // Display the current question index + 1 since index is 0-based
+    currentQuestion.options.forEach((option, index) => {
+      document.getElementById(`choice${index + 1}`).textContent = he.decode(option); // Update choice button text and decode HTML entities in each option and update the button text
+    });
+
+    
+    const questionCountDisplay = document.getElementById('correctCount'); // Update the question counter on the UI
+    questionCountDisplay.textContent = `${currentQuestionIndex + 1} / ${questions.length}`; // Display the current question index + 1 since index is 0-based
 
 
-    }, 100); // Delay to allow DOM time to update
+
   } else {
     console.log("No questions available or an error occurred"); // print a message to console if no questions are availale or other errors occurred
   }
