@@ -139,9 +139,6 @@ body {
       font-size: 14px; /* Slightly smaller font size */
   }
 
-  .choice:hover {
-    background-color: inherit; /* No hover on smaller screen */
-  }
 
   .scoreboard {
       font-size: 16px; /* Slightly smaller font size */
@@ -158,10 +155,6 @@ body {
 
   .home-icon {
       font-size: 18px; /* Even smaller icon size */
-  }
-
-  .choice:hover {
-    background-color: inherit; /* No hover on smaller screen */
   }
 
   .question, .new-game, .choice {
