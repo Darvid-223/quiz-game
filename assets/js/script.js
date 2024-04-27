@@ -139,7 +139,7 @@ function gameOver() {
     gameOverMessage.style.display = 'block'; // show element
   }
   document.getElementById('newGameButton').style.display = 'block'; // Show the new game button again
-  
+  document.getElementById('difficulty-selection').style.display = 'block'; // Show the new game button again
 }
 
 
