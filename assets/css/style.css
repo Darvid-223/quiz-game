@@ -108,6 +108,7 @@ body {
 }
 
 
+
 @media (max-width: 768px) {
   .panel {
       width: 80%; /* Increase relative width on smaller screens */
@@ -139,9 +140,12 @@ body {
       font-size: 14px; /* Slightly smaller font size */
   }
 
-
   .scoreboard {
       font-size: 16px; /* Slightly smaller font size */
+  }
+
+  .choice:hover {
+    background-color: rgba(27, 14, 122, 0.95);
   }
 }
 
@@ -160,4 +164,5 @@ body {
   .question, .new-game, .choice {
       font-size: 14px; /* Uniform smaller font size for all interactive elements */
   }
+
 }

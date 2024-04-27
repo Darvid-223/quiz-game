@@ -102,6 +102,7 @@ function resetButtonStyles() {
     button.style.backgroundColor = ''; // Reset the background color
     button.disabled = false; // Re-enable the buttons
   });
+  
 }
 
 
