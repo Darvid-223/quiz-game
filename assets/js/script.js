@@ -20,12 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to initiate the game
 function startNewGame() {
-    let selectedDifficulty = document.getElementById('difficulty').value;
-    fetchTriviaQuestions(selectedDifficulty).then(fetchedQuestions => {
-    if (fetchedQuestions.length === 0) {
-      console.error("Failed to start game due to no fetched questions.");
-      return; // Exit if no questions are fetched
-    }
+  let selectedDifficulty = document.querySelector('input[name="difficulty"]:checked').value;
+
+  fetchTriviaQuestions(selectedDifficulty).then(fetchedQuestions => {
+      if (fetchedQuestions.length === 0) {
+          console.error("Failed to start game due to no fetched questions.");
+          return; // Exit if no questions are fetched
+      }
     questions = fetchedQuestions; // Store fetched questions
     const gameOverMessage = document.getElementById('gameOverMessage');
     gameOverMessage.style.display = 'none';
