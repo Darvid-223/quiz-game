@@ -1,5 +1,6 @@
-let fetchTriviaQuestions = async () => {
-  let url = 'https://opentdb.com/api.php?amount=10&type=multiple'; // get 10 multiple choice questions
+
+let fetchTriviaQuestions = async (difficulty = 'easy') => {
+  let url = `https://opentdb.com/api.php?amount=10&type=multiple&difficulty=${difficulty}`; // get 10 multiple choice question, medium as default argument
   let response = await fetch(url);
   if (!response.ok) { // Check if the response was successful
       console.error("Failed to fetch questions:", response.status);
