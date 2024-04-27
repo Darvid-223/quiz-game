@@ -21,8 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
 function startNewGame() {
   fetchTriviaQuestions().then(fetchedQuestions => {
     questions = fetchedQuestions; // Store fetched questions
+    const gameOverMessage = document.getElementById('gameOverMessage');
+    gameOverMessage.style.display = 'none';
     currentQuestionIndex = 0; // Reset the question index to start from the first question
     score = 0; // reset score variable
+
     updateScoreDisplay() // update score element
     resetButtonStyles(); // reset button color
     showElements() // show buttons 
@@ -121,13 +124,11 @@ function displayQuestion() {
 
 // Game over function
 function gameOver() {
-  console.log("Game Over! Your score is " + score);
   hideElements()
-
 
   const gameOverMessage = document.getElementById('gameOverMessage');
   if (gameOverMessage) {
-    gameOverMessage.textContent = `Game Over! Your score is ${score}.`;
+    gameOverMessage.textContent = `Game Over! Final score: ${score}.`;
     gameOverMessage.style.display = 'block'; // show element
   }
 }
