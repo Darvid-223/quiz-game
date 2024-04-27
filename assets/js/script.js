@@ -22,6 +22,9 @@ function startNewGame() {
   fetchTriviaQuestions().then(fetchedQuestions => {
     questions = fetchedQuestions; // Store fetched questions
     currentQuestionIndex = 0; // Reset the question index to start from the first question
+    score = 0; // reset score
+    resetButtonStyles(); // reset button color
+    showElements() // show buttons 
     displayQuestion(); // Display the first question
   });
 }
@@ -110,16 +113,29 @@ function displayQuestion() {
 // Game over function
 function gameOver() {
   console.log("Game OVer!");
-      
-      const questionDiv = document.getElementById('question'); // Hide the question div
-      questionDiv.style.display = 'none';
-  
-    
-      const choiceButtons = document.querySelectorAll('.choice'); // Hide all choice buttons within the quiz container
-      choiceButtons.forEach(button => {
-          button.style.display = 'none';
-      });
+  hideElements()
+
 }
 
 
+function hideElements() {
+  const questionDiv = document.getElementById('question'); // Hide the question div
+  questionDiv.style.display = 'none';
+
+
+  const choiceButtons = document.querySelectorAll('.choice'); // Hide all choice buttons within the quiz container
+  choiceButtons.forEach(button => {
+      button.style.display = 'none';
+  });
+}
+
+function showElements() {
+  const questionDiv = document.getElementById('question');
+  questionDiv.style.display = 'block'; // Show the question div
+
+  const choiceButtons = document.querySelectorAll('.choice');
+  choiceButtons.forEach(button => {
+      button.style.display = 'block'; // Show all choice buttons
+  });
+}
 
