@@ -6,6 +6,8 @@
   <meta name="description" content="Test your knowledge">
   <meta name="keywords" content="general knowledge, quiz game, trivia">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -19,6 +21,9 @@
 
   </h1>
   <div class="panel">
+    <a href="/" class="home-icon" title="Go to Homepage">
+      <i class="fa-solid fa-house"></i>
+    </a>
     <div id="difficulty-selection">
       <label for="difficulty">Choose difficulty:</label>
       <select id="difficulty">
@@ -36,7 +41,7 @@
         <button class="choice" id="choice3" style="display: none;"></button>
         <button class="choice" id="choice4" style="display: none;"></button>
     </div>
-    <button id="newGameButton" class="new-game">New Game</button>
+    <button id="newGameButton" class="new-game">Start Game</button>
 </div>
 <div class="scoreboard">
     <p>Score: <span id="currentScore">0</span></p>
