@@ -15,14 +15,3 @@ let fetchTriviaQuestions = async () => {
 };
 
 
-/* 
-// Store questions
-let getQuestions = async () => {
-  let easyQuestions = await fetchTriviaQuestions();
-  console.log(easyQuestions); // print questions in console
-};
-
-//getQuestions();
-
-
-*/
