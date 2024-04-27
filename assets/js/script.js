@@ -22,13 +22,21 @@ function startNewGame() {
   fetchTriviaQuestions().then(fetchedQuestions => {
     questions = fetchedQuestions; // Store fetched questions
     currentQuestionIndex = 0; // Reset the question index to start from the first question
-    score = 0; // reset score
+    score = 0; // reset score variable
+    updateScoreDisplay() // update score element
     resetButtonStyles(); // reset button color
     showElements() // show buttons 
     displayQuestion(); // Display the first question
   });
 }
 
+// Function to update score
+function updateScoreDisplay() {
+  const scoreElement = document.getElementById('currentScore');
+  if (scoreElement) {
+      scoreElement.textContent = `Score: ${score}`; // Update score text
+  }
+}
 
 function selectAnswer(buttonId) {
   const buttons = document.querySelectorAll('.choice');
