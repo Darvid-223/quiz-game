@@ -41,6 +41,11 @@ function selectAnswer(buttonId) {
   }, 3000);
 }
 
+function resetButtonStyles() {
+  document.querySelectorAll('.choice').forEach(button => {
+    button.style.backgroundColor = ''; // Reset the background color
+  });
+}
 
 // Function to display the question
 function displayQuestion() {
