@@ -107,11 +107,6 @@ body {
   margin-right: 0; /* Ensure the last item doesn't have a right margin */
 }
 
-.choice:focus {
-  outline: none;
-  box-shadow: none;
-}
-
 
 @media (max-width: 768px) {
   .panel {
@@ -151,6 +146,12 @@ body {
   .choice:hover {
     background-color: rgba(27, 14, 122, 0.95);
   }
+
+  .choice:focus {
+    outline: none;
+    box-shadow: none;
+  }  
+
 }
 
 
