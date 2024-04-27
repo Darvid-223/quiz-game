@@ -83,9 +83,9 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
-}
-
-.scoreboard p {
   margin: 5px 0;
   font-size: 16px;
+  
 }
+
+

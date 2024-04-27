@@ -121,7 +121,7 @@ function displayQuestion() {
 
 // Game over function
 function gameOver() {
-  console.log("Game OVer!");
+  console.log("Game Over!");
   hideElements()
 
 }
