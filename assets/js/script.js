@@ -121,9 +121,15 @@ function displayQuestion() {
 
 // Game over function
 function gameOver() {
-  console.log("Game Over!");
+  console.log("Game Over! Your score is " + score);
   hideElements()
 
+
+  const gameOverMessage = document.getElementById('gameOverMessage');
+  if (gameOverMessage) {
+    gameOverMessage.textContent = `Game Over! Your score is ${score}.`;
+    gameOverMessage.style.display = 'block'; // show element
+  }
 }
 
 
