@@ -14,6 +14,8 @@ let fetchTriviaQuestions = async () => {
   return formattedQuestions;
 };
 
+
+/* 
 // Store questions
 let getQuestions = async () => {
   let easyQuestions = await fetchTriviaQuestions();
@@ -23,3 +25,4 @@ let getQuestions = async () => {
 //getQuestions();
 
 
+*/
