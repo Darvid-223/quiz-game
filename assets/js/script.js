@@ -17,6 +17,15 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Function to initiate the game
+function startNewGame() {
+  fetchTriviaQuestions().then(fetchedQuestions => {
+    questions = fetchedQuestions; // Store fetched questions
+    currentQuestionIndex = 0; // Reset the question index to start from the first question
+    displayQuestion(); // Display the first question
+  });
+}
+
 
 function selectAnswer(buttonId) {
   const buttons = document.querySelectorAll('.choice');
@@ -46,6 +55,8 @@ function selectAnswer(buttonId) {
   }
 
 
+
+  
   updateScoreDisplay(); // update score
 
   // Wait for 3 seconds before moving to the next question
@@ -56,8 +67,7 @@ function selectAnswer(buttonId) {
       resetButtonStyles(); // Reset the button styles for the new question
 
     } else {
-      console.log("End of quiz");
-      // Optionally, reset the game or display final score
+      gameOver(); // Initiate gameOver function when all questions are answered
     }
   }, 2500);
 }
@@ -84,11 +94,11 @@ function displayQuestion() {
   if (questions.length > 0 && currentQuestionIndex < questions.length) {
     setTimeout(() => {
       const currentQuestion = questions[currentQuestionIndex];
-      // Decode HTML entities in the question text
-      document.getElementById('question').textContent = he.decode(currentQuestion.question);
+      
+      document.getElementById('question').textContent = he.decode(currentQuestion.question); // Decode HTML entities in the question text
       currentQuestion.options.forEach((option, index) => {
-        // Decode HTML entities in each option and update the button text
-        document.getElementById(`choice${index + 1}`).textContent = he.decode(option);
+        
+        document.getElementById(`choice${index + 1}`).textContent = he.decode(option); // Decode HTML entities in each option and update the button text
       });
     }, 100); // Delay to allow DOM time to update
   } else {
@@ -97,15 +107,9 @@ function displayQuestion() {
 }
 
 
-
-
-// Function to initiate the game
-function startNewGame() {
-  fetchTriviaQuestions().then(fetchedQuestions => {
-    questions = fetchedQuestions; // Store fetched questions
-    currentQuestionIndex = 0; // Reset the question index to start from the first question
-    displayQuestion(); // Display the first question
-  });
+// Game over function
+function gameOver() {
+  console.log("Game OVer!");
 }
 
 
