@@ -20,6 +20,6 @@ let getQuestions = async () => {
   console.log(easyQuestions); // print questions in console
 };
 
-getQuestions();
+//getQuestions();
 
 

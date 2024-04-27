@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Function to initiate the game
 function startNewGame() {
   fetchTriviaQuestions().then(fetchedQuestions => {
+
     questions = fetchedQuestions; // Store fetched questions
     const gameOverMessage = document.getElementById('gameOverMessage');
     gameOverMessage.style.display = 'none';
@@ -32,6 +33,8 @@ function startNewGame() {
     displayQuestion(); // Display the first question
   });
 }
+
+
 
 // Function to update score
 function updateScoreDisplay() {
