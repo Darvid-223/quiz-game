@@ -106,3 +106,40 @@ body {
 .scoreboard span:last-child {
   margin-right: 0; /* Ensure the last item doesn't have a right margin */
 }
+
+
+@media (max-width: 768px) {
+  .panel {
+      width: 80%; /* Increase relative width on smaller screens */
+      padding: 30px; /* Reduce padding */
+      min-height: 300px; /* Adjust the minimum height */
+  }
+
+  .home-icon {
+      top: 5px;
+      left: 5px;
+      font-size: 20px; /* Reduce icon size slightly */
+  }
+
+  .question {
+      font-size: 18px; /* Slightly smaller font size */
+  }
+
+  .new-game {
+      padding: 10px 20px;
+      font-size: 16px; /* Slightly smaller font size */
+  }
+
+  .quiz-container {
+      grid-template-columns: 1fr; /* Stack buttons vertically */
+  }
+
+  .choice {
+      padding: 20px; /* Slightly smaller padding */
+      font-size: 14px; /* Slightly smaller font size */
+  }
+
+  .scoreboard {
+      font-size: 16px; /* Slightly smaller font size */
+  }
+}
