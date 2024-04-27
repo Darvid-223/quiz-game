@@ -87,16 +87,22 @@ body {
 }
 
 .scoreboard {
-  background-color: #ffffff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-align: left;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  margin: 5px 0;
-  font-size: 16px;
-  
+  width: 100%;
+  margin-top: 15px; /* Adjust this to reduce/increase space below the home icon */
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between; /* This spreads the score and question count across the width */
+  padding: 10px 0; /* Padding for visual spacing inside scoreboard */
+  display: none; /* Initially hide the scoreboard */
 }
 
+
+.scoreboard span {
+  margin-right: 20px; /* Increase right margin */
+  white-space: nowrap; /* Ensure the text does not wrap to the next line */
+}
+
+.scoreboard span:last-child {
+  margin-right: 0; /* Ensure the last item doesn't have a right margin */
+}

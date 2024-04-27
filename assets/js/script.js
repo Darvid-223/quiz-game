@@ -143,6 +143,8 @@ function hideElements() {
   const questionDiv = document.getElementById('question'); // Hide the question div
   questionDiv.style.display = 'none';
 
+  const scoreboard = document.querySelector('.scoreboard');
+  scoreboard.style.display = 'none'; // Show the scoreboard
 
   const choiceButtons = document.querySelectorAll('.choice'); // Hide all choice buttons within the quiz container
   choiceButtons.forEach(button => {
@@ -157,6 +159,8 @@ function showElements() {
   const difficultyDiv = document.getElementById('difficulty-selection');
   difficultyDiv.style.display = 'none';
 
+  const scoreboard = document.querySelector('.scoreboard');
+  scoreboard.style.display = 'flex'; // Show the scoreboard
   
   const choiceButtons = document.querySelectorAll('.choice');
   choiceButtons.forEach(button => {

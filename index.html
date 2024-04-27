@@ -17,9 +17,6 @@
   <title>Quiz</title>
 </head>
 <body>
-  <h1 class="heading">
-
-  </h1>
   <div class="panel">
     <a href="/" class="home-icon" title="Go to Homepage">
       <i class="fa-solid fa-house"></i>
@@ -33,6 +30,11 @@
       </select>
     </div>
   
+    <div class="scoreboard">
+      <span>Score: <span id="currentScore">0</span></span>     
+      <span>Question: <span id="correctCount">1 / 10</span></span>
+    </div>
+
     <div id="question" class="question" style="display: none;"></div>
     <div class="quiz-container">
         <div id="gameOverMessage" style="display: none;"></div>
@@ -43,10 +45,7 @@
     </div>
     <button id="newGameButton" class="new-game">Start Game</button>
 </div>
-<div class="scoreboard">
-    <p>Score: <span id="currentScore">0</span></p>
-    <p>Question: <span id="correctCount">1 / 10</span></p>
-</div>
+
   <script src="assets/js/questions.js"></script> 
   <script src="assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/he/he.js"></script> <!-- import he library to decode html-->
