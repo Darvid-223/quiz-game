@@ -21,17 +21,34 @@ body {
 
 /* Styling for the header, specifically for positioning the home icon */
 header {
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
   position: absolute; 
+  top: 10px;
+  left: 0;
+  right: 0; 
+  height: 60px; 
+}
+
+/* Home icon styling */
+.home-icon {
+  position: absolute;
   top: 10px; 
-  left: 10px;
+  left: 10px; 
+  font-size: 24px; 
+  color: white; 
+  text-decoration: none; 
 }
 
 /* h1 styling */
 header h1 {
   font-family: 'Permanent Marker', cursive;
   font-size: 45px; 
-  color: white; 
+  color: white;
+  margin: 0; /* Ta bort eventuell marginal för att säkerställa korrekt centrerad placering */
 }
+
 
 /* Primary panel styling for quiz content */
 .panel {
@@ -57,16 +74,6 @@ header h1 {
   width: 100%;  
   text-align: center;  
   display: none;  
-}
-
-/* Home icon styling */
-.home-icon {
-  position: absolute;
-  top: 10px; 
-  left: 10px; 
-  font-size: 24px; 
-  color: white; 
-  text-decoration: none; 
 }
 
 /* Question container styling */
