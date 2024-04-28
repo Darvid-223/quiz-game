@@ -6,25 +6,32 @@
   <meta name="description" content="Test your knowledge">
   <meta name="keywords" content="general knowledge, quiz game, trivia">
 
+  <!-- Google fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 
   <meta name="author" content="David Arvidsson">
+  <!-- Stylesheet-->
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Quiz</title>
 </head>
 <body>
+  <!-- Header containing the home navigation icon -->
   <header>
     <a href="index.html" class="home-icon" title="Go to Homepage">
       <i class="fa-solid fa-house"></i>
     </a>
   </header>
 
+  <!-- Main content area -->
   <main>
     <div class="panel">
+
+      <!-- Message displayed at game over -->
       <div id="gameOverMessage" style="display: none;">Your final score is: <span id="finalScore"></span></div>
-      
+
+      <!-- Difficulty selection area -->
       <div id="difficulty-selection">
         <fieldset>
             <legend>Choose difficulty:</legend>
@@ -34,12 +41,16 @@
         </fieldset>
       </div>
     
+      <!-- Scoreboard displaying current score and question number -->
       <div class="scoreboard">
         <span>Score: <span id="currentScore">0</span></span>     
         <span>Question: <span id="correctCount">1 / 10</span></span>
       </div>
-    
+      
+      <!-- The current question text -->
       <div id="question" class="question" style="display: none;"></div>
+
+      <!-- Container for quiz answer choices -->
       <div class="quiz-container">
           <div id="gameOverMessage" style="display: none;"></div>
           <button class="choice" id="choice1" style="display: none;"></button>
@@ -47,18 +58,19 @@
           <button class="choice" id="choice3" style="display: none;"></button>
           <button class="choice" id="choice4" style="display: none;"></button>
       </div>
+
+      <!-- Button to start a new game -->
       <button id="newGameButton" class="new-game">Start Game</button>
     </div>
   </main>
 
-  
-
+  <!-- Scripts for functionality and decoding HTML entities -->
   <script src="assets/js/questions.js"></script> 
   <script src="assets/js/script.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/he/he.js"></script> <!-- import he library to decode html-->
   <script src="https://kit.fontawesome.com/41764756f3.js" crossorigin="anonymous"></script>
 
-  <!-- Footer copied from Ernesto project 1 -->
+  <!-- Footer copied from Ernesto project 1 - Social network links and icons in the footer -->
   <footer>
     <ul id="social-network">
         <li><a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page">
