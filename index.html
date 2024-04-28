@@ -33,6 +33,18 @@
       <!-- Message displayed at game over -->
       <div id="gameOverMessage" style="display: none;">Your final score is: <span id="finalScore"></span></div>
 
+      <!-- Category selection-->
+      <div id="category-selection">
+        <label for="category">Choose category:</label>
+        <select id="category">
+          <option value="22">Geography</option>
+          <option value="9">General Knowledge</option>
+          <option value="11">Entertainment: Film</option>
+          <option value="17">Science & Nature</option>
+          <option value="23">History</option>
+        </select>
+      </div>
+      <br>
       <!-- Difficulty selection area -->
       <div id="difficulty-selection">
         <fieldset>
@@ -42,7 +54,7 @@
             <label><input type="radio" name="difficulty" value="hard"> Hard</label>
         </fieldset>
       </div>
-    
+      <br>
       <!-- Scoreboard displaying current score and question number -->
       <div class="scoreboard">
         <span>Score: <span id="currentScore">0</span></span>     
