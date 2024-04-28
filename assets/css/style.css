@@ -11,6 +11,7 @@ body {
   background-attachment: fixed; 
   height: 100vh;
   margin: 0;
+
   font-family: "Quicksand", sans-serif;
 }
 
@@ -32,7 +33,7 @@ body {
   position: absolute;
   top: 10px; 
   left: 10px; 
-  font-size: 24px; /* Icon size */
+  font-size: 24px; 
   color: #000; 
   text-decoration: none; 
 }
@@ -52,7 +53,7 @@ body {
   margin-top: 20px;
   padding: 15px 30px;
   font-size: 18px;
-  background-color: #28a745; /* Green, suggests 'go' or 'start' */
+  background-color: #28a745; 
   color: white;
   border: none;
   border-radius: 5px;
@@ -88,12 +89,12 @@ body {
 
 .scoreboard {
   width: 100%;
-  margin-top: 15px; /* Adjust this to reduce/increase space below the home icon */
+  margin-top: 15px; 
   text-align: center;
   font-size: 18px;
   display: flex;
-  justify-content: space-between; /* This spreads the score and question count across the width */
-  padding: 10px 0; /* Padding for visual spacing inside scoreboard */
+  justify-content: space-between; 
+  padding: 10px 0; 
   display: none; /* Initially hide the scoreboard */
 }
 
@@ -104,10 +105,22 @@ body {
 }
 
 .scoreboard span:last-child {
-  margin-right: 0; /* Ensure the last item doesn't have a right margin */
+  margin-right: 0; /* Ensure the last item doesnt have a right margin */
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #333; /* Adjust background color as needed */
+  color: white; /* Adjust text color as needed */
+  text-align: center;
+  padding: 10px 0;
 }
 
 
+/* Media query */
 @media (max-width: 768px) {
   .panel {
       width: 80%; /* Increase relative width on smaller screens */
