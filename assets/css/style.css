@@ -39,7 +39,6 @@ header {
   flex-direction: column; 
   position: relative;
   min-height: 360px; 
-
   position: relative;
 }
 
@@ -230,5 +229,5 @@ footer {
   .question, .new-game, .choice {
       font-size: 14px; /* Uniform smaller font size for all interactive elements */
   }
-  
+
 }
