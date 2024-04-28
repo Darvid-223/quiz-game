@@ -48,6 +48,7 @@ function updateScoreDisplay() {
   }
 }
 
+// Function to verify answer
 function selectAnswer(buttonId) {
   const buttons = document.querySelectorAll('.choice');
   buttons.forEach(button => {
@@ -77,7 +78,6 @@ function selectAnswer(buttonId) {
   
   updateScoreDisplay(); // update score
 
-  // Wait for 2 seconds before moving to the next question
   setTimeout(() => {
     currentQuestionIndex++; // Move to the next question
     if (currentQuestionIndex < questions.length) {
@@ -87,9 +87,10 @@ function selectAnswer(buttonId) {
     } else {
       gameOver(); // Initiate gameOver function when all questions are answered
     }
-  }, 2000);
+  }, 2000); // Wait for 2 seconds before moving to the next question
 }
 
+// resets color of choice buttons
 function resetButtonStyles() {
   document.querySelectorAll('.choice').forEach(button => {
     button.style.backgroundColor = ''; // Reset the background color
@@ -131,6 +132,7 @@ function gameOver() {
   document.getElementById('difficulty-selection').style.display = 'block'; // Show the new game button again
 }
 
+// hides irrelevant elements during game play
 function hideElements() {
   const questionDiv = document.getElementById('question'); // Hide the question div
   questionDiv.style.display = 'none';
@@ -144,6 +146,7 @@ function hideElements() {
   });
 }
 
+// show relevant elements during game play
 function showElements() {
   const questionDiv = document.getElementById('question');
   questionDiv.style.display = 'block'; // Show the question div
