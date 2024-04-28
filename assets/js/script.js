@@ -125,7 +125,7 @@ function gameOver() {
 
   const gameOverMessage = document.getElementById('gameOverMessage');
   if (gameOverMessage) {
-    gameOverMessage.textContent = `Game Over! Final score: ${score}.`;
+    gameOverMessage.textContent = `Game Over! Final score: ${score}`;
     gameOverMessage.style.display = 'block'; // show element
   }
   document.getElementById('newGameButton').style.display = 'block'; // Show the new game button again
