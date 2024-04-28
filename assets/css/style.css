@@ -1,5 +1,4 @@
-
-
+/* Main layout and background styling */
 main {
   display: flex;
   background-image: url('../images/world-map-smaller.jpg'); 
@@ -14,17 +13,20 @@ main {
   font-family: "Quicksand", sans-serif;
 }
 
+/* Zero out the margin and padding to remove browser default spacing */
 body {
   margin: 0;
   padding: 0;
 }
 
+/* Styling for the header, specifically for positioning the home icon */
 header {
-  position: absolute; /* Position it absolutely within the relatively positioned panel */
-  top: 10px; /* Adjust these values based on exact placement needs */
+  position: absolute; 
+  top: 10px; 
   left: 10px;
 }
 
+/* Primary panel styling for quiz content */
 .panel {
   background-color: rgba(223, 224, 238, 0.855);
   padding: 50px;
@@ -41,6 +43,7 @@ header {
   position: relative;
 }
 
+/* Styles for the game over message */
 #gameOverMessage {
   margin-bottom: 20px; 
   font-size: 20px;  
@@ -50,6 +53,7 @@ header {
   display: none;  
 }
 
+/* Home icon styling */
 .home-icon {
   position: absolute;
   top: 10px; 
@@ -59,6 +63,7 @@ header {
   text-decoration: none; 
 }
 
+/* Question container styling */
 .question {
   margin-bottom: 20px;
   font-size: 20px;
@@ -70,6 +75,7 @@ header {
   border-radius: 10px;
 }
 
+/* New game button styling */
 .new-game {
   margin-top: 20px;
   padding: 15px 30px;
@@ -82,10 +88,12 @@ header {
   transition: background-color 0.3s;
 }
 
+/* New game button hover effect */
 .new-game:hover {
   background-color: #218838;
 }
 
+/* Grid container for quiz answers */
 .quiz-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -93,6 +101,7 @@ header {
   width: 100%; 
 }
 
+/* Individual choice button styling */
 .choice {
   padding: 30px;
   font-size: 16px;
@@ -104,10 +113,12 @@ header {
   transition: background-color 0.3s;
 }
 
+/* Hover effect for choice buttons */
 .choice:hover {
   background-color: #0056b3;
 }
 
+/* Scoreboard styling */
 .scoreboard {
   width: 100%;
   margin-top: 15px; 
@@ -116,23 +127,24 @@ header {
   display: flex;
   justify-content: space-between; 
   padding: 10px 0; 
-  display: none; /* Initially hide the scoreboard */
+  display: none; 
 }
 
-
+/* Styling to manage spacing between scoreboard items */
 .scoreboard span {
-  margin-right: 20px; /* Increase right margin */
-  white-space: nowrap; /* Ensure the text does not wrap to the next line */
+  margin-right: 20px; 
+  white-space: nowrap; 
 }
 
+/* Remove margin from the last scoreboard item */
 .scoreboard span:last-child {
-  margin-right: 0; /* Ensure the last item doesnt have a right margin */
+  margin-right: 0; 
 }
 
 /*  Footer */
 footer {
   width: 100%;
-  position: fixed; /* Fixed funkar bäst? absoulte funkar inte  */
+  position: fixed; /* Fixed funkar bäst, absoulte funkar inte  */
   bottom: 0;
   left: 0;
   background-color: #333; 
@@ -141,23 +153,23 @@ footer {
   padding: 10px 0;
 }
 
-
+/* Styling for social network links */
 #social-network {
   list-style: none;
   padding: 0;
-  margin: 0; /* Remove margin to align properly */
+  margin: 0; 
   display: flex;
-  justify-content: center; /* Center the list items horizontally */
+  justify-content: center; 
   gap: 20px; /* Adds space between each icon */
 
 }
 
+/* Footer icon color*/ 
 #social-network a {
-  color: white; /* Footer icon color*/ 
+  color: white; 
 }
 
-
-/* Media query */
+/* Media query for responsiveness */
 @media (max-width: 768px) {
   .panel {
       width: 80%; /* Increase relative width on smaller screens */
@@ -204,7 +216,6 @@ footer {
 
 }
 
-
 @media (max-width: 480px) {
   .panel {
       width: 95%; /* Make the panel take almost full width */
@@ -219,5 +230,5 @@ footer {
   .question, .new-game, .choice {
       font-size: 14px; /* Uniform smaller font size for all interactive elements */
   }
-
+  
 }
