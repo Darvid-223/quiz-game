@@ -120,10 +120,6 @@ footer {
   padding: 10px 0;
 }
 
-body {
-  padding-bottom: 600px;  /* Adjust based on the height of your footer */
-}
-
 
 #social-network {
   list-style: none;
