@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('newGameButton').addEventListener('click', startNewGame); // Added event listener to id: "newGameButton", and calling "startNewGame" function when clicked
 });
 
-
-
 // Function to initiate the game
 function startNewGame() {
   let selectedDifficulty = document.querySelector('input[name="difficulty"]:checked').value;
@@ -42,8 +40,6 @@ function startNewGame() {
   });
 }
 
-
-
 // Function to update score
 function updateScoreDisplay() {
   const scoreElement = document.getElementById('currentScore');
@@ -51,7 +47,6 @@ function updateScoreDisplay() {
       scoreElement.textContent = score; // Update score text
   }
 }
-
 
 function selectAnswer(buttonId) {
   const buttons = document.querySelectorAll('.choice');
@@ -79,13 +74,10 @@ function selectAnswer(buttonId) {
       }
     });
   }
-
-
-
   
   updateScoreDisplay(); // update score
 
-  // Wait for 3 seconds before moving to the next question
+  // Wait for 2 seconds before moving to the next question
   setTimeout(() => {
     currentQuestionIndex++; // Move to the next question
     if (currentQuestionIndex < questions.length) {
@@ -95,7 +87,7 @@ function selectAnswer(buttonId) {
     } else {
       gameOver(); // Initiate gameOver function when all questions are answered
     }
-  }, 2500);
+  }, 2000);
 }
 
 function resetButtonStyles() {
@@ -105,10 +97,6 @@ function resetButtonStyles() {
   });
   
 }
-
-
-
-
 
 // Function to display the question
 function displayQuestion() {
@@ -130,7 +118,6 @@ function displayQuestion() {
   }
 }
 
-
 // Game over function
 function gameOver() {
   hideElements()
@@ -143,7 +130,6 @@ function gameOver() {
   document.getElementById('newGameButton').style.display = 'block'; // Show the new game button again
   document.getElementById('difficulty-selection').style.display = 'block'; // Show the new game button again
 }
-
 
 function hideElements() {
   const questionDiv = document.getElementById('question'); // Hide the question div
@@ -172,5 +158,5 @@ function showElements() {
   choiceButtons.forEach(button => {
       button.style.display = 'block'; // Show all choice buttons
   });
-}
+};
 
