@@ -19,9 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
 // Function to initiate the game
 function startNewGame() {
   let selectedDifficulty = document.querySelector('input[name="difficulty"]:checked').value;
+  let selectedCategory = document.getElementById('category').value;
 
-  fetchTriviaQuestions(selectedDifficulty).then(fetchedQuestions => {
-      if (fetchedQuestions.length === 0) {
+  fetchTriviaQuestions(selectedDifficulty, selectedCategory).then(fetchedQuestions => {
+    if (fetchedQuestions.length === 0) {
           console.error("Failed to start game due to no fetched questions.");
           return; // Exit if no questions are fetched
       }
