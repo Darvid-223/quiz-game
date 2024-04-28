@@ -1,6 +1,7 @@
+// Open trivia database API
 let fetchTriviaQuestions = async (difficulty = 'easy') => {
   // get 10 multiple choice question, medium as default argument
-  let url = `https://opentdb.com/api.php?amount=10&type=multiple&difficulty=${difficulty}`; 
+  let url = `https://opentdb.com/api.php?amount=10&type=multiple&category=22&difficulty=${difficulty}`; 
   let response = await fetch(url);
   // Check if the response was successful
   if (!response.ok) { 
