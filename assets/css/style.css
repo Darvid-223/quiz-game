@@ -26,6 +26,13 @@ header {
   left: 10px;
 }
 
+header h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 36px;  /* Justera storleken enligt ditt behov */
+  color: #333; /* Justera färgen enligt ditt behov */
+}
+
+
 /* Primary panel styling for quiz content */
 .panel {
   background-color: rgba(223, 224, 238, 0.855);
