@@ -28,13 +28,22 @@ header {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   width: 60%; 
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;  
   flex-direction: column; 
   position: relative;
   min-height: 360px; 
 
   position: relative;
+}
+
+#gameOverMessage {
+  margin-bottom: 20px; 
+  font-size: 20px;  
+  color: #333;  
+  width: 100%;  
+  text-align: center;  
+  display: none;  
 }
 
 .home-icon {

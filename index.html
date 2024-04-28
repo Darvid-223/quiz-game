@@ -21,7 +21,8 @@
     </a>
   </header>
   <div class="panel">
-
+    <div id="gameOverMessage" style="display: none;">Your final score is: <span id="finalScore"></span></div>
+    
     <div id="difficulty-selection">
       <fieldset>
           <legend>Choose difficulty:</legend>
@@ -35,7 +36,7 @@
       <span>Score: <span id="currentScore">0</span></span>     
       <span>Question: <span id="correctCount">1 / 10</span></span>
     </div>
-
+   
     <div id="question" class="question" style="display: none;"></div>
     <div class="quiz-container">
         <div id="gameOverMessage" style="display: none;"></div>
@@ -45,6 +46,7 @@
         <button class="choice" id="choice4" style="display: none;"></button>
     </div>
     <button id="newGameButton" class="new-game">Start Game</button>
+   
   </div>
 
   <script src="assets/js/questions.js"></script> 
