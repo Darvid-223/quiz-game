@@ -26,12 +26,12 @@ header {
   left: 10px;
 }
 
+/* h1 styling */
 header h1 {
   font-family: 'Permanent Marker', cursive;
-  font-size: 36px;  /* Justera storleken enligt ditt behov */
-  color: #333; /* Justera färgen enligt ditt behov */
+  font-size: 45px; 
+  color: white; 
 }
-
 
 /* Primary panel styling for quiz content */
 .panel {
