@@ -20,34 +20,38 @@
       <i class="fa-solid fa-house"></i>
     </a>
   </header>
-  <div class="panel">
-    <div id="gameOverMessage" style="display: none;">Your final score is: <span id="finalScore"></span></div>
+
+  <main>
+    <div class="panel">
+      <div id="gameOverMessage" style="display: none;">Your final score is: <span id="finalScore"></span></div>
+      
+      <div id="difficulty-selection">
+        <fieldset>
+            <legend>Choose difficulty:</legend>
+            <label><input type="radio" name="difficulty" value="easy"> Easy</label>
+            <label><input type="radio" name="difficulty" value="medium" checked> Medium</label>
+            <label><input type="radio" name="difficulty" value="hard"> Hard</label>
+        </fieldset>
+      </div>
     
-    <div id="difficulty-selection">
-      <fieldset>
-          <legend>Choose difficulty:</legend>
-          <label><input type="radio" name="difficulty" value="easy"> Easy</label>
-          <label><input type="radio" name="difficulty" value="medium" checked> Medium</label>
-          <label><input type="radio" name="difficulty" value="hard"> Hard</label>
-      </fieldset>
+      <div class="scoreboard">
+        <span>Score: <span id="currentScore">0</span></span>     
+        <span>Question: <span id="correctCount">1 / 10</span></span>
+      </div>
+    
+      <div id="question" class="question" style="display: none;"></div>
+      <div class="quiz-container">
+          <div id="gameOverMessage" style="display: none;"></div>
+          <button class="choice" id="choice1" style="display: none;"></button>
+          <button class="choice" id="choice2" style="display: none;"></button>
+          <button class="choice" id="choice3" style="display: none;"></button>
+          <button class="choice" id="choice4" style="display: none;"></button>
+      </div>
+      <button id="newGameButton" class="new-game">Start Game</button>
     </div>
+  </main>
+
   
-    <div class="scoreboard">
-      <span>Score: <span id="currentScore">0</span></span>     
-      <span>Question: <span id="correctCount">1 / 10</span></span>
-    </div>
-   
-    <div id="question" class="question" style="display: none;"></div>
-    <div class="quiz-container">
-        <div id="gameOverMessage" style="display: none;"></div>
-        <button class="choice" id="choice1" style="display: none;"></button>
-        <button class="choice" id="choice2" style="display: none;"></button>
-        <button class="choice" id="choice3" style="display: none;"></button>
-        <button class="choice" id="choice4" style="display: none;"></button>
-    </div>
-    <button id="newGameButton" class="new-game">Start Game</button>
-   
-  </div>
 
   <script src="assets/js/questions.js"></script> 
   <script src="assets/js/script.js"></script>
