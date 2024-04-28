@@ -28,6 +28,10 @@ function startNewGame() {
     questions = fetchedQuestions; // Store fetched questions
     const gameOverMessage = document.getElementById('gameOverMessage');
     gameOverMessage.style.display = 'none';
+
+    const categoryDiv = document.getElementById('category-selection');
+    categoryDiv.style.display = 'none'; // Hide the category selection
+
     currentQuestionIndex = 0; // Reset the question index to start from the first question
     score = 0; // reset score variable
 
@@ -140,6 +144,9 @@ function hideElements() {
   const scoreboard = document.querySelector('.scoreboard');
   scoreboard.style.display = 'none'; // Show the scoreboard
 
+  const categoryDiv = document.getElementById('category-selection');
+  categoryDiv.style.display = 'block'; // Show the category selection
+
   const choiceButtons = document.querySelectorAll('.choice'); // Hide all choice buttons within the quiz container
   choiceButtons.forEach(button => {
       button.style.display = 'none';
@@ -153,7 +160,7 @@ function showElements() {
 
   const difficultyDiv = document.getElementById('difficulty-selection');
   difficultyDiv.style.display = 'none';
-
+  
   const scoreboard = document.querySelector('.scoreboard');
   scoreboard.style.display = 'flex'; // Show the scoreboard
   

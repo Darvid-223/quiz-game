@@ -73,6 +73,7 @@ header h1 {
   width: 100%;  
   text-align: center;  
   display: none;  
+  font-family: 'Permanent Marker', cursive;
 }
 
 /* Question container styling */
