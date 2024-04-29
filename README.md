@@ -2,6 +2,9 @@
 
 ## Introduction & Overview 
 
+
+![Am I Responsive image](/docs/images/responsiveness.png)
+
 ## Website Structure and Development Details
 
 ## Features
@@ -28,7 +31,11 @@
 
 ### Validator Testing
 
+- HTML: Validation was performed using the W3C Markup Validation Service, confirming that the HTML structure of the website is error-free and complies with web standards.
 
+- CSS: The site's CSS was checked through the W3C CSS Validation Service (Jigsaw), which found no issues, verifying that the stylesheets meet current web development guidelines.
+
+![Am I Responsive image](/docs/images/lighthouse-score.png)
 
 ### Unfixed Bugs
 
