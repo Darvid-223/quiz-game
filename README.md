@@ -91,3 +91,7 @@ The use of this library enhances the application's functionality by allowing it 
 ### Media
 
 ### Acknowledgements
+
+- My mentor, Sheryl Goldberg, provided invaluable feedback and insightful suggestions for enhancing the project along the way.
+
+- My friend Lucas Behrendt also provided me with feedback and tips from his experience in the same course.
