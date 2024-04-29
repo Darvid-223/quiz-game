@@ -1,5 +1,41 @@
 # quiz-game
 
+- [quiz-game](#quiz-game)
+  * [Introduction & Overview](#introduction---overview)
+  * [Features](#features)
+    + [Category Selection](#category-selection)
+    + [Difficulty Settings](#difficulty-settings)
+    + [Quiz Questions](#quiz-questions)
+    + [Score Tracking](#score-tracking)
+    + [Responsive Design](#responsive-design)
+  * [Features Left to Implement](#features-left-to-implement)
+    + [Leaderboard](#leaderboard)
+    + [Time-based Questions](#time-based-questions)
+    + [Score Sharing](#score-sharing)
+  * [Testing](#testing)
+    + [Overview](#overview)
+    + [Feature Testing](#feature-testing)
+    + [Validator Testing](#validator-testing)
+    + [Solved Bugs](#solved-bugs)
+    + [Unsolved Bugs](#unsolved-bugs)
+  * [Technologies Used](#technologies-used)
+    + [Tools and Resources](#tools-and-resources)
+  * [Deployment](#deployment)
+    + [Github Pages](#github-pages)
+    + [Live Site Link](#live-site-link)
+  * [Local Development Setup](#local-development-setup)
+    + [Introduction](#introduction)
+    + [Why Visual Studio Code and WSL?](#why-visual-studio-code-and-wsl-)
+    + [Prerequisites](#prerequisites)
+    + [Setting Up the Environment](#setting-up-the-environment)
+  * [Credits & Acknowledgments](#credits---acknowledgments)
+    + [npmjs HE Library](#npmjs-he-library)
+    + [OpenTDB API](#opentdb-api)
+    + [Media](#media)
+    + [Acknowledgements](#acknowledgements)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 ## Introduction & Overview 
 
 Quiz-Game is a dynamic web application designed to offer a fun and interactive way to test general knowledge across various categories. This project aims to demonstrate the practical application of JavaScript, HTML, and CSS by creating a responsive and engaging user experience. The game targets quiz enthusiasts and learners who seek to test their knowledge in different domains such as geography, science, history, and more. It's designed to be intuitive and accessible, ensuring users of all ages can easily navigate and enjoy the game.
@@ -14,7 +50,7 @@ The quiz game is fully responsive, making it available on a variety of devices, 
 
 - Allows users to choose the category of their interest before starting the quiz, enhancing the personalized gaming experience.
 
-![Category selection](/docs/images/category-selection.png)
+![Category selection image](/docs/images/category-selection.png)
 
 ### Difficulty Settings
 
@@ -24,13 +60,13 @@ The quiz game is fully responsive, making it available on a variety of devices, 
 
 - A central display area where questions are presented one at a time. Users interact with this area to select their answers.
 
-![Category selection](/docs/images/question.png)
+![Question image](/docs/images/question.png)
 
 ### Score Tracking
 
 - Throughout the quiz, users can view their current score which updates instantly as they answer questions correctly and a final score will appear after the last quesion.
 
-![Category selection](/docs/images/final-score.png)
+![Final Score image](/docs/images/final-score.png)
 
 ### Responsive Design
 
@@ -60,11 +96,9 @@ The quiz game has undergone rigorous testing to ensure functionality across diff
 
 ### Feature Testing
 
+To ensure the website delivers a high-quality user experience, the site was analyzed using Google's Lighthouse tool. This comprehensive tool assesses the website across multiple dimensions including performance, accessibility, best practices, and SEO. The audit results helped identify areas for improvement and confirm the effectiveness of optimizations. The Lighthouse scores provided valuable insights into the responsiveness and efficiency of the site, ensuring that it meets modern web standards and provides a seamless user experience on various devices and network conditions.
 
-
-### Browser Compatibility
-
-### Responsiveness
+![Lighthouse Score](/docs/images/lighthouse-score.png)
 
 ### Validator Testing
 
@@ -76,8 +110,21 @@ The quiz game has undergone rigorous testing to ensure functionality across diff
 
 ![Am I Responsive image](/docs/images/lighthouse-score.png)
 
+### Solved Bugs
 
-### Unfixed Bugs
+**Issue: Button Focus on Mobile Devices**
+
+In earlier iterations of the quiz application, there was an issue where buttons that had been clicked in previous questions retained a highlighted state due to browser default focus styles. This was only noticeable on mobile devices, where the focused button appeared differently than other buttons, potentially misleading the user about which button had been selected in the current question.
+
+**Impact**
+
+This visual carryover from one question to the next could confuse users, as it gave the impression that a button was pre-selected or held a special significance for the current question, which was not the case.
+
+**Resolution**
+
+The problem was resolved by modifying the CSS to remove the default focus styles specifically on mobile devices. This was achieved by using a media query to set outline: none and box-shadow: none for buttons on screens smaller than 768 pixels. This adjustment ensured that all buttons would appear consistent from one question to the next, regardless of previous interactions, thus maintaining a clear and user-friendly interface across all device types.
+
+### Unsolved Bugs
 
 **Issue 1**
 
@@ -103,25 +150,101 @@ This bug can significantly affect the user experience by preventing players from
 
 The issue is currently mitigated by preventing the game from starting if no questions are loaded, ensuring that players are not presented with a blank quiz. Players may simply wait a few seconds and attempt to start the game again, which typically resolves the issue as the API response time improves. This method ensures that no game session starts without data, thus preventing potential confusion or a poor user experience.
 
-### Handling 404 Errors
-
 ## Technologies Used
 
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+- [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+- [JavaScript](https://en.wikipedia.org/wiki/javascript) 
+
 ### Tools and Resources
+
+- [Git](https://git-scm.com/): Employed for version control, enabling regular commits to Git and updates to GitHub from the terminal in Gitpod.
+
+- [GitHub](https://github.com/): Hosts the repository containing the project's code. GitHub Pages also hosts the live version of the website.
+
+- [Pixels](https://www.pexels.com/sv-se/): Provided royalty-free images and videos, enhancing the visual content of the contact page.
+
+- [W3C Validation](https://www.w3.org/): Used to ensure the website's HTML and CSS adhere to industry standards and best practices.
+
+- [JSHint](https://jshint.com/): A tool that helps to detect errors and potential problems in JavaScript code, ensuring that the code adheres to coding standards and is free from syntax errors.
+
+- [Visual Studio Code](https://code.visualstudio.com/): The code editor of choice for developing the website, offering powerful coding and debugging tools.
+
+- [OpenAI's ChatGPT](https://openai.com/): Assisted in validating code, checking spelling, providing translations, offering coding advice, and supporting the refinement of the website's content and functionality. ChatGPT also played a role in generating content for documentation and assisting with real-time troubleshooting during development.
+
+- [Font Awesome](https://fontawesome.com/): Supplied the vector icons integrated throughout the website.
+
+- [Google Fonts](https://fonts.google.com/): The source of all custom typography on the website, enhancing the user interface's aesthetics.
+
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/): An indispensable suite of web development tools used extensively in the website's development process.
+
+- [Open Trivia Database (OpenTDB)](https://opentdb.com/): Provides a free API that supplies the trivia questions for the quiz, allowing for a diverse range of questions on various topics and difficulties.
+
+- [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/): Enabled the use of Linux tools on Windows, such as running a local development server through Python's HTTP server module by executing `python -m http.server`.
 
 ## Deployment
 
 ### Github Pages
 
+The project was successfully deployed to GitHub Pages. Here are the steps I followed to deploy the project:
+
+1. **GitHub Repository Setup**:
+   - The development was done locally and the changes were pushed to GitHub regularly using Git.
+
+2. **Preparing for Deployment**:
+   - All final changes were committed and pushed to GitHub to ensure that the repository was up-to-date.
+
+3. **Activating GitHub Pages**:
+   - Navigate to the 'Settings' tab of the GitHub repository.
+   - Scroll down to the 'Pages' section.
+   - Select the branch to deploy from the source section drop-down menu (typically `main` or `master`) and choose the folder (`/ (root)` or `/docs`).
+
+4. **Deployment Execution**:
+   - GitHub Pages automatically deploys the project upon source selection. The page will refresh, providing a link to the deployed site.
+   - This URL allows public access to the live version of the project.
+
+5. **Post-Deployment Testing**:
+   - I conducted a thorough review of the live site to ensure that all functionalities worked as expected.
+   - I tested all links, features, and responsiveness to confirm that the live site behaved identically to the local development version.
+
+### Live Site Link
+
+- The live site can be accessed through this URL: [https://darvid-223.github.io/quiz-game/index.html](https://darvid-223.github.io/quiz-game/index.html). This provides users with direct interaction with the fully functional deployed application.
+
 ## Local Development Setup
 
 ### Introduction
 
+While the course recommends using Codeanywhere as a cloud-based development environment, for this project, I opted to use Visual Studio Code installed locally on my Windows computer. My familiarity with Visual Studio Code and its immediate responsiveness compared to the process of setting up and loading Codeanywhere each time greatly influenced this choice.
+
 ### Why Visual Studio Code and WSL?
+
+Visual Studio Code is a powerful and versatile code editor that supports a wide range of programming languages and frameworks. Its extensive library of extensions makes it highly customizable, fitting perfectly into my workflow. Furthermore, by leveraging the Windows Subsystem for Linux (WSL), I was able to create a Linux-like development environment on Windows. This setup allowed me to use Linux commands and tools directly in Windows, offering the best of both worlds for web development.
+
+Choosing Visual Studio Code and WSL over Codeanywhere was a strategic decision to optimize my development process, capitalizing on speed and efficiency without sacrificing the versatility and power needed for complex web development tasks.
 
 ### Prerequisites
 
+To replicate this local development environment, I installed the following programs to my system:
+
+- Visual Studio Code as my primary code editor.
+- Windows Subsystem for Linux (WSL) for a Linux-compatible terminal and development environment on Windows.
+- Git for version control and cloning the project repository.
+
 ### Setting Up the Environment
+
+1. Install WSL: Follow the instructions provided by Microsoft to install WSL on your Windows machine. Choose a Linux distribution of your preference from the Microsoft Store (Ubuntu is a popular choice).
+
+2. Install Visual Studio Code: Download and install Visual Studio Code from the official website. Once installed, enhance your setup with extensions like Live Server for real-time page reloading and the WSL extension to integrate your Linux environment seamlessly.
+
+3. Clone the Repository: Open VS Code's integrated terminal, switch to your WSL environment, and clone the Restaurant Ernesto repository using Git:
+git clone https://github.com/Darvid-223/quiz-game.git
+cd ernesto
+
+4. Run the Project Locally: With the repository cloned to your local machine, you can start a simple HTTP server to serve the project files. If you have Python installed in your WSL environment, you can use it to start a server:
+python -m http.server
 
 ## Credits & Acknowledgments
 
