@@ -60,7 +60,9 @@ The quiz game is fully responsive, making it available on a variety of devices, 
 
 - A central display area where questions are presented one at a time. Users interact with this area to select their answers.
 
-![Question image](/docs/images/question.png)![Question image](/docs/images/correct-answer.png)![Question image](/docs/images/incorrect-answer.png)
+![Question image](/docs/images/question.png)
+![Question image](/docs/images/correct-answer.png)
+![Question image](/docs/images/incorrect-answer.png)
 
 ### Score Tracking
 
