@@ -6,13 +6,9 @@
 
 ## Features
 
-### Navigation Bar
+### Home Icon
 
-### Home Page
-
-### Menu Page
-
-### Reserve Page
+### Main Page
 
 ### Responsive Design
 
@@ -32,9 +28,11 @@
 
 ### Validator Testing
 
+
+
 ### Unfixed Bugs
 
-**Issue Description**
+**Issue 1**
 
 Currently, there is a bug in the quiz application where visual feedback does not consistently work as expected during the gameplay. When a user selects an incorrect answer, the chosen button correctly turns red to indicate a wrong answer; however, the button that represents the correct answer does not always turn green. This issue affects user experience by not providing clear and consistent feedback, which is crucial for learning and game interaction.
 
@@ -42,8 +40,11 @@ Currently, there is a bug in the quiz application where visual feedback does not
 
 This bug can lead to confusion among users as they are not always visually informed of the correct answer after making an incorrect selection. It undermines the educational aspect of the quiz by not reinforcing the correct information through visual cues.
 
+**Current Status**
 
-**Issue Description**
+Unresolved.
+
+**Issue 2**
 
 Users may experience an issue where no questions or answers are displayed when the game is started quickly after a page refresh or initial load. This intermittent problem appears to be tied to the asynchronous nature of data fetching from the quiz API, where responses may not return quickly enough under certain conditions, such as slow network speeds or high server load.
 

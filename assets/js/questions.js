@@ -1,4 +1,4 @@
-// Open trivia database API
+// Open trivia database API. Function is called in script.js
 let fetchTriviaQuestions = async (difficulty = 'easy', category = 22) => { // Default to easy difficulty and Geography category
   let url = `https://opentdb.com/api.php?amount=10&type=multiple&difficulty=${difficulty}&category=${category}`;
   let response = await fetch(url);

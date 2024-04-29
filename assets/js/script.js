@@ -1,4 +1,5 @@
-
+/* global fetchTriviaQuestions */
+/* global he */
 // variables
 let questions = []; 
 let currentQuestionIndex = 0; // tracks current question index
@@ -36,9 +37,9 @@ function startNewGame() {
     currentQuestionIndex = 0; // Reset the question index to start from the first question
     score = 0; // reset score variable
 
-    updateScoreDisplay() // update score element
+    updateScoreDisplay(); // update score element
     resetButtonStyles(); // reset button color
-    showElements() // show buttons 
+    showElements(); // show buttons 
     displayQuestion(); // Display the first question
 
     document.getElementById('newGameButton').style.display = 'none'; // Hide the new game button
@@ -113,6 +114,7 @@ function displayQuestion() {
     document.getElementById('question').textContent = he.decode(currentQuestion.question); // update displayed question and decode HTML entities in the question text
 
     currentQuestion.options.forEach((option, index) => {
+
       document.getElementById(`choice${index + 1}`).textContent = he.decode(option); // Update choice button text and decode HTML entities in each option and update the button text
     });
     
@@ -126,7 +128,7 @@ function displayQuestion() {
 
 // Game over function
 function gameOver() {
-  hideElements()
+  hideElements();
 
   const gameOverMessage = document.getElementById('gameOverMessage');
   if (gameOverMessage) {
@@ -169,5 +171,5 @@ function showElements() {
   choiceButtons.forEach(button => {
       button.style.display = 'block'; // Show all choice buttons
   });
-};
+}
 
