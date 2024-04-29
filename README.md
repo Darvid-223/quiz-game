@@ -110,23 +110,7 @@ To ensure the website delivers a high-quality user experience, the site was anal
 
 - JavaScript: The JavaScript code for the website underwent validation through JSHint, which highlighted that the script uses ES8 features such as async functions and flagged one unused variable due to a function defined in a separate file. These issues were addressed by annotating cross-file global function usage to clarify the code structure.
 
-![Am I Responsive image](/docs/images/lighthouse-score.png)
-
-### Solved Bugs
-
-**Issue: Button Focus on Mobile Devices**
-
-In earlier iterations of the quiz application, there was an issue where buttons that had been clicked in previous questions retained a highlighted state due to browser default focus styles. This was only noticeable on mobile devices, where the focused button appeared differently than other buttons, potentially misleading the user about which button had been selected in the current question.
-
-**Impact**
-
-This visual carryover from one question to the next could confuse users, as it gave the impression that a button was pre-selected or held a special significance for the current question, which was not the case.
-
-**Resolution**
-
-The problem was resolved by modifying the CSS to remove the default focus styles specifically on mobile devices. This was achieved by using a media query to set outline: none and box-shadow: none for buttons on screens smaller than 768 pixels. This adjustment ensured that all buttons would appear consistent from one question to the next, regardless of previous interactions, thus maintaining a clear and user-friendly interface across all device types.
-
-### Unsolved Bugs
+### Unresolved Bugs
 
 **Issue 1**
 
@@ -185,6 +169,20 @@ The issue is currently mitigated by preventing the game from starting if no ques
 - [Open Trivia Database (OpenTDB)](https://opentdb.com/): Provides a free API that supplies the trivia questions for the quiz, allowing for a diverse range of questions on various topics and difficulties.
 
 - [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/): Enabled the use of Linux tools on Windows, such as running a local development server through Python's HTTP server module by executing `python -m http.server`.
+
+### OpenTDB API Integration
+
+**Overview**
+
+The Open Trivia Database (OpenTDB) API is a pivotal component of this project, enabling the dynamic generation of quiz questions. This free API allows for access to a large repository of trivia questions across multiple categories and difficulties.
+
+**Functionality**
+
+In the Quiz Game, the API is configured to fetch questions based on user-selected preferences from five different categories: Geography, General Knowledge, Film, Science & Nature, and History. Additionally, users can choose the difficulty level for the questions: Easy, Medium, or Hard. This functionality ensures that the quiz content is not only diverse but also tailored to the individual preferences of the user, enhancing the overall engagement and educational value of the game.
+
+**Implementation**
+
+The integration involves sending requests to the OpenTDB API and handling the responses to format and display the questions and answer choices appropriately within the quiz interface. The API's flexibility allows for seamless customization of the quiz content, catering to a wide range of knowledge bases and interests.
 
 ## Deployment
 
@@ -252,9 +250,7 @@ python -m http.server
 
 ### npmjs HE Library
 
-This project utilizes the HE library for HTML entity encoding and decoding in JavaScript. The HE library is an open-source parser and encoder that greatly simplifies handling HTML entities in web applications. Its robust functionality helps ensure that all text content fetched from external sources is correctly formatted and displayed in the quiz.
-
-The use of this library enhances the application's functionality by allowing it to accurately process and display questions and answers that include special characters and symbols, providing a seamless and error-free user experience.
+This project incorporates the HE library to decode HTML entities in data retrieved from an external API. The HE library is an open-source tool designed to encode and decode HTML entities in JavaScript, which is essential for accurately handling and displaying text content that includes special characters and symbols. By integrating this library, the application ensures that questions and answers fetched from the API are correctly formatted, thus enhancing the user experience by presenting content without any encoding errors. This functionality is crucial for maintaining the integrity and readability of the quiz content, especially when it includes various HTML entities.
 
 [Npmjs](https://www.npmjs.com/package/he)
 
