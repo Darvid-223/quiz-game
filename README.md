@@ -40,9 +40,7 @@
 
 Quiz-Game is a dynamic web application designed to offer a fun and interactive way to test general knowledge across various categories. This project aims to demonstrate the practical application of JavaScript, HTML, and CSS by creating a responsive and engaging user experience. The game targets quiz enthusiasts and learners who seek to test their knowledge in different domains such as geography, science, history, and more. It's designed to be intuitive and accessible, ensuring users of all ages can easily navigate and enjoy the game.
 
-The quiz game is fully responsive, making it available on a variety of devices, ensuring a seamless experience whether on a desktop, tablet, or smartphone. The game progresses through a series of questions, each with multiple-choice dadwadwa
-awd
-waanswers, and provides immediate feedback on the correctness of the user's choices, along with a final score at the end of each session.
+The quiz game is fully responsive, making it available on a variety of devices, ensuring a seamless experience whether on a desktop, tablet, or smartphone. The game progresses through a series of questions, each with multiple-choice answers, and provides immediate feedback on the correctness of the user's choices, along with a final score at the end of each session.
 
 ![Am I Responsive image](/docs/images/responsiveness.png)
 
